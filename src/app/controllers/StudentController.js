@@ -1,5 +1,6 @@
 import * as Yup from 'yup';
 import Student from '../models/Student';
+import User from '../models/User';
 
 class StudentController {
   async store(req, res) {
@@ -35,14 +36,13 @@ class StudentController {
       return res.status(400).json({ error: 'Student is already registered' });
     }
 
-    /*
-    if (!(await student.checkIsAdmin())) {
+    const user = await User.findByPk(req.userId);
+
+    if (!user.isadmin) {
       return res
         .status(401)
-        .json({ error: 'User does not permition to register a student' });
+        .json({ error: 'User does not have permission to register a student' });
     }
-
-    */
 
     const student = await Student.create(req.body);
 

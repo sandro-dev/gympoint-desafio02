@@ -16,10 +16,6 @@ class Student extends Model {
     );
     return this;
   }
-
-  checkIsAdmin() {
-    // verify user admin
-  }
 }
 
 export default Student;
