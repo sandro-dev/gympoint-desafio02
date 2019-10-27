@@ -48,6 +48,42 @@ class StudentController {
 
     return res.json(student);
   }
+
+  async update(req, res) {
+    const schema = Yup.object().shape({
+      name: Yup.string(),
+      email: Yup.string().email(),
+      age: Yup.number()
+        .positive()
+        .integer(),
+      weight: Yup.number()
+        .round()
+        .moreThan(30),
+      height: Yup.number().moreThan(1),
+    });
+
+    if (!(await schema.isValid(req.body))) {
+      return res.status(400).json({ error: 'Validation fails' });
+    }
+
+    const { email } = req.body;
+
+    const student = await Student.findByPk(req.params.id);
+
+    if (email) {
+      if (email !== student.email) {
+        const StudentExists = await User.findOne({ where: { email } });
+
+        if (StudentExists) {
+          return res.status(400).json({ error: 'This email already exists.' });
+        }
+      }
+    }
+
+    const { id, name } = await student.update(req.body);
+
+    return res.json({ id, name, email });
+  }
 }
 
 export default new StudentController();
