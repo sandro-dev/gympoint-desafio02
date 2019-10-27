@@ -29,13 +29,13 @@ O projeto será desenvolvido aos poucos até o fim do treinamento, quando teremo
 
 - O usuário pode se autenticar utilizando e-mail e uma senha;
 - A autenticação está sendo feita utilizando JWT;
-- Está sendo feita a validação dos dados de entrada, para criar ou editar um usuário;
+- Há validação dos dados de entrada, para criar ou editar um usuário;
 
 #### 2. Cadastro de alunos
 
 - Foi criada uma nova tabela no banco de dados chamada `students`;
 - Os alunos são mantidos (cadastrados/atualizados) na aplicação utilizando `nome, email, idade, peso e altura`;
-- É feita uma verificação se o usuário autenticado para inserir um aluno é administrador
+- É feita uma verificação antes de inserir um aluno, se o usuário autenticado durante a inserção é administrador;
 - O aluno não se autentica no sistema, ou seja, não possui senha.
 
 
