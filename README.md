@@ -6,7 +6,7 @@
   Desafio 2: Gympoint, o início
 </h3>
 
-<blockquote align="center">“Tudo tem o seu tempo determinado, e há tempo para todo o propósito debaixo do céu. (Eclesiastes 3:1)”!</blockquote>
+<blockquote align="center">“Tudo tem o seu tempo determinado, e há tempo para todo o propósito debaixo do céu. (Eclesiastes 3:1)”</blockquote>
 
 ## Sobre o desafio
 
