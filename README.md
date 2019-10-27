@@ -10,8 +10,8 @@
 
 ## Sobre o desafio
 
-App gerenciador de academia, o **Gympoint**.
-Esse projeto será desenvolvido aos poucos até o fim do treinamento, onde será desenvolvida uma aplicação completa envolvendo back-end, front-end e mobile, e que será utilizada para a certificação do bootcamp.
+Nesse desafio, está sendo desenvolvido o **Gympoint** - App gerenciador de academia.
+O projeto será desenvolvido aos poucos até o fim do treinamento, quando teremos uma solução completa envolvendo back-end, front-end e mobile, e que será utilizada para a certificação do bootcamp.
 
 ### Um pouco sobre as ferramentas
 
